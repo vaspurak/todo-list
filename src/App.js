@@ -7,7 +7,7 @@ function App() {
 
   const addTask = (e) => {
     e.preventDefault();
-    if (text.trim() === "") return;
+    // if (text.trim() === "") return;
     setTasks([...tasks, { id: Date.now(), text, completed: false }]);
     setText("");
   };
