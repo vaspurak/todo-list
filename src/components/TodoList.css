@@ -1,0 +1,79 @@
+@keyframes fadeIn {
+  0% {
+    opacity: 0; /* Начинаем с полной прозрачности */
+  }
+  50% {
+    opacity: 2; /* Заканчиваем с полной видимостью */
+  }
+}
+.todo-list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 5px;
+  width: 800px;
+  border: 1px solid black;
+  border-radius: 15px;
+  padding: 10px;
+  opacity: 1; /* Начальная прозрачность */
+  animation: fadeIn 0.8s ease-in-out forwards; /* Анимация */
+}
+
+.todo-ul-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0px;
+}
+.todo-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.todo-heading {
+  opacity: 1; /* Начальная прозрачность */
+  animation: fadeIn 1s ease-in-out forwards; /* Анимация */
+}
+.title {
+  font-size: 25px;
+}
+.del-btn {
+  font-size: 30px;
+  background-color: unset;
+  color: rgb(171, 85, 85);
+  cursor: pointer;
+  transition: transform 0.1s ease-in-out;
+}
+.del-btn:hover {
+  transform: translateY(-1px);
+  transform: scale(1.2);
+  color: red;
+}
+
+.toggle-btn {
+  font-size: 30px;
+  background-color: unset;
+  color: rgb(65, 155, 21);
+  cursor: pointer;
+  transition: transform 0.1s ease-in-out;
+}
+.toggle-btn:hover {
+  background-color: unset;
+  color: rgb(47, 255, 0);
+  transform: scale(1.4);
+}
+.toggle-btn:active {
+  transform: translateY(2px);
+}
+.list-icons {
+  width: 80px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.todo-list.completed,
+.todo-list.completed .del-btn,
+.todo-list.completed .toggle-btn {
+  background-color: gray;
+  color: rgb(168, 159, 159);
+}
